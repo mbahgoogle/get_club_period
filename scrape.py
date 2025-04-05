@@ -72,52 +72,69 @@ def is_club_match(club1, club2, threshold=80):
 def convert_to_transfers_url(profile_url):
     return profile_url.replace('/profil/', '/transfers/')
 
-def get_transfer_history(profile_url):
+def get_transfer_history(profile_url, max_retries=3):
     transfers_url = convert_to_transfers_url(profile_url)
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        page = browser.new_page()
-        page.set_extra_http_headers({
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-        })
-        print(f"Fetching URL with Playwright: {transfers_url}")
-        try:
-            page.goto(transfers_url)
-            page.wait_for_selector('div.tm-player-transfer-history-grid', timeout=15000)
-            html_content = page.content()
-            soup = BeautifulSoup(html_content, 'html.parser')
-            transfer_rows = soup.find_all('div', class_='grid tm-player-transfer-history-grid')
-            if not transfer_rows:
-                return []
-            transfers = []
-            for row in transfer_rows:
-                if 'tm-player-transfer-history-grid--sum' in row.get('class', []) or 'tm-player-transfer-history-grid--heading' in row.get('class', []):
-                    continue
-                season = row.find('div', class_='tm-player-transfer-history-grid__season')
-                date = row.find('div', class_='tm-player-transfer-history-grid__date')
-                old_club = row.find('div', class_='tm-player-transfer-history-grid__old-club')
-                new_club = row.find('div', class_='tm-player-transfer-history-grid__new-club')
-                if season and date and old_club and new_club:
-                    season_text = season.text.strip()
-                    date_text = date.text.strip()
-                    old_club_text = old_club.find('a', class_='tm-player-transfer-history-grid__club-link')
-                    old_club_text = old_club_text.text.strip() if old_club_text else old_club.text.strip()
-                    new_club_text = new_club.find('a', class_='tm-player-transfer-history-grid__club-link')
-                    new_club_text = new_club_text.text.strip() if new_club_text else new_club.text.strip()
-                    transfer = {
-                        'season': season_text,
-                        'date': date_text,
-                        'old_club': old_club_text,
-                        'new_club': new_club_text
-                    }
-                    transfers.append(transfer)
-            transfers.sort(key=lambda x: parse_date(x['date']) if parse_date(x['date']) else datetime.min)
-            return transfers
-        except Exception as e:
-            print(f"Error fetching {transfers_url}: {e}")
-            return []
-        finally:
-            browser.close()
+    retries = 0
+
+    while retries < max_retries:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            page = browser.new_page()
+            page.set_extra_http_headers({
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+            })
+
+            try:
+                print(f"Fetching URL (Attempt {retries+1}): {transfers_url}")
+                page.goto(transfers_url, timeout=20000)
+                page.wait_for_selector('div.tm-player-transfer-history-grid', timeout=15000)
+                page.wait_for_timeout(500)  # Delay ekstra untuk aman
+
+                html_content = page.content()
+                soup = BeautifulSoup(html_content, 'html.parser')
+                transfer_rows = soup.find_all('div', class_='grid tm-player-transfer-history-grid')
+
+                if not transfer_rows:
+                    return []
+
+                transfers = []
+                for row in transfer_rows:
+                    if 'tm-player-transfer-history-grid--sum' in row.get('class', []) or \
+                       'tm-player-transfer-history-grid--heading' in row.get('class', []):
+                        continue
+
+                    season = row.find('div', class_='tm-player-transfer-history-grid__season')
+                    date = row.find('div', class_='tm-player-transfer-history-grid__date')
+                    old_club = row.find('div', class_='tm-player-transfer-history-grid__old-club')
+                    new_club = row.find('div', class_='tm-player-transfer-history-grid__new-club')
+
+                    if season and date and old_club and new_club:
+                        old_club_text = old_club.find('a', class_='tm-player-transfer-history-grid__club-link')
+                        old_club_text = old_club_text.text.strip() if old_club_text else old_club.text.strip()
+
+                        new_club_text = new_club.find('a', class_='tm-player-transfer-history-grid__club-link')
+                        new_club_text = new_club_text.text.strip() if new_club_text else new_club.text.strip()
+
+                        transfer = {
+                            'season': season.text.strip(),
+                            'date': date.text.strip(),
+                            'old_club': old_club_text,
+                            'new_club': new_club_text
+                        }
+                        transfers.append(transfer)
+
+                transfers.sort(key=lambda x: parse_date(x['date']) if parse_date(x['date']) else datetime.min)
+                return transfers
+
+            except Exception as e:
+                print(f"Error on attempt {retries+1}: {e}")
+                retries += 1
+            finally:
+                browser.close()
+
+    print(f"Failed to fetch {transfers_url} after {max_retries} attempts.")
+    return []
+
 
 def parse_date(date_str):
     try:
