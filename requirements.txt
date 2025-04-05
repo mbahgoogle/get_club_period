@@ -1,0 +1,5 @@
+pandas
+beautifulsoup4
+playwright
+fuzzywuzzy
+python-Levenshtein
