@@ -16,26 +16,19 @@ except ImportError:
 
 # Daftar aturan untuk menangani singkatan klub 
 CLUB_ALIASES = {
-  "botafogo de futebol e regatas": ["botafogo", "fogo", "estrela solitária"],
-  "ceará sporting club": ["ceará", "vozão", "alvinegro", "ceará sc"],
-  "clube atlético mineiro": ["atlético mineiro", "galo", "cam", "atlético-mg"],
-  "clube de regatas vasco da gama": ["vasco", "cruzmaltino", "gigante da colina", "vasco da gama"],
-  "cruzeiro esporte clube": ["cruzeiro", "raposa", "celeste"],
-  "cr flamengo": ["flamengo", "mengão", "rubro-negro"],
-  "esporte clube bahia": ["bahia", "tricolor", "aço","ec bahia"],
-  "esporte clube juventude": ["juventude", "juve", "verde"],
-  "esporte clube vitória": ["vitória", "leão", "rubro-negro", "ec vitória"],
-  "fluminense football club": ["fluminense", "flu", "tricolor"],
-  "fortaleza esporte clube": ["fortaleza", "leão do pici", "tricolor"],
-  "grêmio foot-ball porto alegrense": ["grêmio", "tricolor gaúcho", "imortal"],
-  "mirassol futebol clube (sp)": ["mirassol", "leão da alta", "amarelo", "mirassol-sp"],
-  "red bull bragantino": ["bragantino", "rb bragantino", "massa bruta"],
-  "santos fc": ["santos", "peixe", "alvinegro praiano"],
-  "sociedade esportiva palmeiras": ["palmeiras", "verdão", "porco"],
-  "sport club corinthians paulista": ["corinthians", "timão", "alvinegro"],
-  "sport club do recife": ["sport", "leão", "rubro-negro", "sport recife"],
-  "sport club internacional": ["internacional", "colorado", "inter"],
-  "são paulo futebol clube": ["são paulo", "tricolor", "spfc", "sao paulo"]
+  "adelaide united": ["adelaide", "the reds"],
+  "auckland fc": ["auckland", "the blues"],
+  "brisbane roar": ["brisbane", "the roar"],
+  "central coast mariners": ["mariners", "central coast", "the yellow and navy"],
+  "macarthur fc": ["macarthur", "the bulls"],
+  "melbourne city fc": ["melbourne city", "melbourne heart", "the heart"],
+  "melbourne victory": ["melbourne vic", "melbourne", "the big v"],
+  "newcastle united jets": ["newcastle jets", "newcastle", "the jets"],
+  "perth glory": ["perth", "glory", "the glory"],
+  "sydney fc": ["sydney", "the sky blues"],
+  "wellington phoenix": ["wellington", "phoenix", "the nix"],
+  "western sydney wanderers": ["wanderers", "western sydney", "the red and black"],
+  "western united fc": ["western united", "united", "the green and black"]
 }
 
 
