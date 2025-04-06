@@ -16,22 +16,26 @@ except ImportError:
 
 # Daftar aturan untuk menangani singkatan klub 
 CLUB_ALIASES = {
-  "1.fc slovacko": ["slovacko", "synot", "the blue-whites"],
-  "ac sparta prague": ["sparta prague", "sparta", "železná sparta", "the iron sparta"],
-  "bohemians prague 1905": ["bohemians", "klokani", "the kangaroos"],
-  "fc banik ostrava": ["banik ostrava", "banik", "černí draci", "the black dragons"],
-  "fc hradec kralove": ["hradec kralove", "včelí", "the bees"],
-  "fc slovan liberec": ["slovan liberec", "slovan", "ještědi", "the ještěd men"],
-  "fc viktoria plzen": ["viktoria plzen", "plzen", "viktorka", "the red-blues"],
-  "fk dukla prague": ["dukla prague", "dukla", "červenobílí", "the red-whites"],
-  "fk jablonec": ["jablonec", "zelenobílí", "the green-whites", "jablonec 97"],
-  "fk mlada boleslav": ["mlada boleslav", "bolka", "the blue-whites"],
-  "fk pardubice": ["pardubice", "jeseter", "the sturgeons"],
-  "fk teplice": ["teplice", "skláři", "the glassmakers", "vtj teplice"],
-  "mfk karvina": ["karvina", "horníci", "the miners"],
-  "sk dynamo ceske budejovice": ["dynamo ceske budejovice", "české budějovice", "černobílí", "the black-whites", "c. budejovice"],
-  "sk sigma olomouc": ["sigma olomouc", "sigma", "hanáci", "the haná men"],
-  "sk slavia prague": ["slavia prague", "slavia", "sešívaní", "the stitched"]
+    "afc bournemouth": ["bournemouth"], 
+    "arsenal fc": ["arsenal"], 
+    "aston villa": ["aston villa"], 
+    "brentford fc": ["brentford"], 
+    "brighton & hove albion": ["brighton"], 
+    "chelsea fc": ["chelsea"], 
+    "crystal palace": ["crystal palace"], 
+    "everton fc": ["everton"], 
+    "fulham fc": ["fulham"], 
+    "ipswich town": ["ipswich"], 
+    "leicester city": ["leicester"], 
+    "liverpool fc": ["liverpool"], 
+    "manchester city": ["man city"], 
+    "manchester united": ["man utd"], 
+    "newcastle united": ["newcastle"], 
+    "nottingham forest": ["nottingham"], 
+    "southampton fc": ["southampton"], 
+    "tottenham hotspur": ["tottenham"], 
+    "west ham united": ["west ham"], 
+    "wolverhampton wanderers": ["wolves"], 
 }
 
 
