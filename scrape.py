@@ -16,24 +16,24 @@ except ImportError:
 
 # Daftar aturan untuk menangani singkatan klub 
 CLUB_ALIASES = {
-    "arema fc": ["arema"],
-    "bali united fc": ["bali united"],
-    "borneo fc samarinda": ["borneo fc", "borneo"],
-    "dewa united fc": ["dewa united"],
-    "madura united fc": ["madura united"],
-    "malut united fc": ["malut united"],
-    "persebaya surabaya": ["persebaya"],
-    "persib bandung": ["persib"],
-    "persija jakarta": ["persija"],
-    "persik kediri": ["persik"],
-    "persis solo": ["persis"],
-    "persita tangerang": ["persita"],
-    "psbs biak": ["psbs"],
-    "psis semarang": ["psis"],
-    "psm makassar": ["makassar"],
-    "pss sleman": ["sleman"],
-    "ps barito putera": ["barito"],
-    "semen padang fc": ["semen padang"],
+  "atlas guadalajara": ["atlas", "los rojinegros", "the red-blacks"],
+  "atlético de san luis": ["san luis", "los tuneros", "the prickly pears"],
+  "cd cruz azul": ["cruz azul", "la máquina", "the machine"],
+  "cf américa": ["américa", "las águilas", "the eagles"],
+  "cf monterrey": ["monterrey", "rayados", "the striped ones"],
+  "cf pachuca": ["pachuca", "los tuzos", "the gophers"],
+  "club león fc": ["león", "los esmeraldas", "the emeralds"],
+  "club necaxa": ["necaxa", "los rayos", "the lightning"],
+  "club tijuana": ["tijuana", "xolos", "the xoloitzcuintles"],
+  "deportivo guadalajara": ["guadalajara", "chivas", "las chivas rayadas", "the striped goats"],
+  "deportivo toluca": ["toluca", "los diablos rojos", "the red devils"],
+  "fc juárez": ["juárez", "los bravos", "the braves"],
+  "mazatlán fc": ["mazatlán", "los cañoneros", "the gunners"],
+  "puebla fc": ["puebla", "la franja", "the stripe"],
+  "querétaro fc": ["querétaro", "los gallos blancos", "the white roosters"],
+  "santos laguna": ["santos", "los guerreros", "the warriors"],
+  "tigres uanl": ["tigres", "los felinos", "the felines"],
+  "unam pumas": ["pumas", "los universitarios", "the university ones"]
 }
 
 
