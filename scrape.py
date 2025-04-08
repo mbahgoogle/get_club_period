@@ -28,7 +28,7 @@ CLUB_ALIASES = {
   "psms medan": ["psms", "ayam kinantan", "the kinantan roosters"],
   "psps pekanbaru": ["psps", "laskar bertuah", "the charmed warriors"],
   "rans nusantara fc": ["rans", "the prestige phoenix", "rans fc"],
-  "sriwijaya fc": ["sriwijaya", "laskar wong kito", "the palembang warriors"]
+  "sriwijaya fc": ["sriwijaya", "laskar wong kito", "the palembang warriors"],
   "rcd espanyol barcelona": ["español"]
 }
 
