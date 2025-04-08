@@ -16,36 +16,20 @@ except ImportError:
 
 # Daftar aturan untuk menangani singkatan klub 
 CLUB_ALIASES = {
-  "atlanta united fc": ["atlanta united", "atlanta utd.", "the five stripes", "atlanta"],
-  "austin fc": ["austin", "the verde", "los verdes"],
-  "cf montréal": ["montréal", "l'impact", "the blue-black", "montreal"],
-  "charlotte fc": ["charlotte", "the crown", "the minted"],
-  "chicago fire fc": ["chicago fire", "the fire", "men in red", "chicago"],
-  "colorado rapids": ["rapids", "the burgundy boys", "colorado"],
-  "columbus crew": ["crew", "the black and gold", "columbus"],
-  "d.c. united": ["dc united", "the black-and-red"],
-  "fc cincinnati": ["cincinnati", "the orange and blue", "fcc"],
-  "fc dallas": ["dallas", "the toros", "fcd", "dallas burn"],
-  "houston dynamo fc": ["houston dynamo", "the orange crush", "houston"],
-  "inter miami cf": ["inter miami", "the herons", "las garzas", "miami"],
-  "los angeles fc": ["lafc", "the black and gold"],
-  "los angeles galaxy": ["la galaxy", "the galaxy", "galácticos"],
-  "minnesota united fc": ["minnesota united", "the loons", "minnesota"],
-  "nashville sc": ["nashville", "the boys in gold"],
-  "new england revolution": ["revolution", "the revs", "new england"],
-  "new york city fc": ["nyc fc", "the pigeons", "the boys in blue"],
-  "new york red bulls": ["red bulls", "the metros", "new york"],
-  "orlando city sc": ["orlando city", "the lions", "orlando"],
-  "philadelphia union": ["union", "the u", "the zolos"],
-  "portland timbers": ["timbers", "the timbers army", "portland"],
-  "real salt lake city": ["real salt lake", "rsl", "the claret and cobalt", "salt lake"],
-  "san diego fc": ["san diego", "the chrome and azul"],
-  "san jose earthquakes": ["earthquakes", "the quakes", "sj earthquakes"],
-  "seattle sounders fc": ["sounders", "the rave green", "seattle"],
-  "sporting kansas city": ["sporting kc", "the wizards", "kansas city wiz", "wizards"],
-  "st. louis city sc": ["st. louis city", "city", "the burgundy and blue"],
-  "toronto fc": ["toronto", "tfc", "the reds"],
-  "vancouver whitecaps fc": ["whitecaps", "vancouver whitecaps", "the caps", "the blue and white", "vancouver"]
+  "bhayangkara presisi fc": ["bhayangkara", "the guardians"],
+  "deltras fc": ["deltras", "the lobsters"],
+  "persela lamongan": ["persela", "laskar joko tingkir", "the blue eagles"],
+  "persijap jepara": ["persijap", "laskar kalinyamat", "the tigers"],
+  "persikabo 1973": ["persikabo", "laskar padjajaran", "tr-kabo"],
+  "persipura jayapura": ["persipura", "mutiara hitam", "the black pearls"],
+  "persiraja banda aceh": ["persiraja", "laskar rencong", "the rencong warriors"],
+  "psim yogyakarta": ["psim", "laskar mataram", "the mataram warriors"],
+  "pskc cimahi": ["pskc", "laskar sangkuriang"],
+  "psms medan": ["psms", "ayam kinantan", "the kinantan roosters"],
+  "psps pekanbaru": ["psps", "laskar bertuah", "the charmed warriors"],
+  "rans nusantara fc": ["rans", "the prestige phoenix", "rans fc"],
+  "sriwijaya fc": ["sriwijaya", "laskar wong kito", "the palembang warriors"]
+  "rcd espanyol barcelona": ["español"]
 }
 
 
