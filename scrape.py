@@ -16,20 +16,11 @@ except ImportError:
 
 # Daftar aturan untuk menangani singkatan klub 
 CLUB_ALIASES = {
-  "bhayangkara presisi fc": ["bhayangkara", "the guardians"],
-  "deltras fc": ["deltras", "the lobsters"],
-  "persela lamongan": ["persela", "laskar joko tingkir", "the blue eagles"],
-  "persijap jepara": ["persijap", "laskar kalinyamat", "the tigers"],
-  "persikabo 1973": ["persikabo", "laskar padjajaran", "tr-kabo"],
-  "persipura jayapura": ["persipura", "mutiara hitam", "the black pearls"],
-  "persiraja banda aceh": ["persiraja", "laskar rencong", "the rencong warriors"],
-  "psim yogyakarta": ["psim", "laskar mataram", "the mataram warriors"],
-  "pskc cimahi": ["pskc", "laskar sangkuriang"],
-  "psms medan": ["psms", "ayam kinantan", "the kinantan roosters"],
-  "psps pekanbaru": ["psps", "laskar bertuah", "the charmed warriors"],
-  "rans nusantara fc": ["rans", "the prestige phoenix", "rans fc"],
-  "sriwijaya fc": ["sriwijaya", "laskar wong kito", "the palembang warriors"],
-  "rcd espanyol barcelona": ["español"]
+  "bhayangkara presisi fc": ["bhayangkara", "the guardians", "surabaya united", "persebaya du"],
+  "persikabo 1973": ["persikabo", "laskar padjajaran", "tr-kabo", "ps tira"],
+  "psps pekanbaru": ["psps", "laskar bertuah", "the charmed warriors", "psps riau"],
+  "rans nusantara fc": ["rans", "rans cilegon", "cilegon utd.", "rans fc"],
+  "rcd espanyol barcelona": ["español", "espanyol", "rcd espanyol"]
 }
 
 
