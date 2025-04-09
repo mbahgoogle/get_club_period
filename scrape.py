@@ -16,13 +16,8 @@ except ImportError:
 
 # Daftar aturan untuk menangani singkatan klub 
 CLUB_ALIASES = {
-  "bhayangkara presisi fc": ["bhayangkara", "the guardians", "surabaya united", "persebaya du"],
-  "persikabo 1973": ["persikabo", "laskar padjajaran", "tr-kabo", "ps tira"],
-  "psps pekanbaru": ["psps", "laskar bertuah", "the charmed warriors", "psps riau"],
-  "rans nusantara fc": ["rans", "rans cilegon", "cilegon utd.", "rans fc"],
   "rcd espanyol barcelona": ["español", "espanyol", "rcd espanyol"]
 }
-
 
 def normalize_club_name(club_name):
     return club_name.lower().strip()
